@@ -8,6 +8,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DeviceManagementComponent } from './components/device-management/device-management.component';
 import { RoomManagementComponent } from './components/room-management/room-management.component';
 import { AutomationRulesComponent } from './components/automation-rules/automation-rules.component';
+import { NotificationsComponent } from './components/notifications/notifications.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { AutomationRulesComponent } from './components/automation-rules/automati
     DashboardComponent,
     DeviceManagementComponent,
     RoomManagementComponent,
-    AutomationRulesComponent
+    AutomationRulesComponent,
+    NotificationsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
