@@ -1,32 +1,32 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
+import { HeaderComponent } from './components/header/header.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { DeviceManagementComponent } from './components/device-management/device-management.component';
-import { RoomManagementComponent } from './components/room-management/room-management.component';
-import { AutomationRulesComponent } from './components/automation-rules/automation-rules.component';
-import { NotificationsComponent } from './components/notifications/notifications.component';
-import { LoginComponent } from './components/login/login.component';
+import { DeviceControlComponent } from './components/device-control/device-control.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { DeviceService } from './services/device.service';
+import { SettingsService } from './services/settings.service';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
+    SidebarComponent,
     DashboardComponent,
-    DeviceManagementComponent,
-    RoomManagementComponent,
-    AutomationRulesComponent,
-    NotificationsComponent,
-    LoginComponent
+    DeviceControlComponent,
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    FormsModule
   ],
-  providers: [],
+  providers: [DeviceService, SettingsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
