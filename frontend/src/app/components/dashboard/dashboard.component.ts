@@ -1,4 +1,3 @@
-// dashboard.component.ts
 
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from '../../services/weather.service';
@@ -47,7 +46,7 @@ export class DashboardComponent implements OnInit {
     this.newsService.initSources()
       .subscribe((data: any) => {
         this.newsSources = data.sources;
-        console.log('News Sources:', this.newsSources);
+        // console.log('News Sources:', this.newsSources);
       }, (error) => {
         console.error('Error fetching news sources:', error);
       });
