@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +12,7 @@ import { DeviceControlComponent } from './components/device-control/device-contr
 import { SettingsComponent } from './components/settings/settings.component';
 import { DeviceService } from './services/device.service';
 import { SettingsService } from './services/settings.service';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { SettingsService } from './services/settings.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule 
   ],
   providers: [DeviceService, SettingsService],
   bootstrap: [AppComponent]

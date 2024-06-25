@@ -1,33 +1,46 @@
 <div class="container">
-    <div class="row">
-      <div class="col">
-        <h2>Dashboard</h2>
-        <p>Overview of your smart home.</p>
-      </div>
+  <div class="row dashboard-header">
+    <div class="col">
+      <h2>Dashboard</h2>
+      <p>Overview of your smart home.</p>
     </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <div class="card-header">
-            <h4 class="my-0 fw-normal">Light</h4>
-          </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title">Off</h1>
-            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Toggle</button>
-          </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card weather-card">
+        <div class="card-body">
+          <h5 class="card-title">Weather Forecast</h5>
+          <p class="card-text">
+            <span *ngIf="weatherData">{{ weatherData.main.temp }}°C, {{ weatherData.weather[0].description }}</span>
+            <span *ngIf="!weatherData">Loading...</span>
+          </p>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <div class="card-header">
-            <h4 class="my-0 fw-normal">Fan</h4>
-          </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title">Off</h1>
-            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Toggle</button>
-          </div>
+      <div class="card temperature-card">
+        <div class="card-body">
+          <h5 class="card-title">Room Temperature</h5>
+          <p class="card-text">22°C</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card map-card">
+        <div class="card-body">
+          <h5 class="card-title">Map</h5>
+          <div id="map" style="height: 200px;">Map will be here</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card video-card">
+        <div class="card-body">
+          <h5 class="card-title">Nature Video</h5>
+          <video controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>
   </div>
-  
+</div>

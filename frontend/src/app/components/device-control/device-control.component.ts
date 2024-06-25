@@ -8,15 +8,28 @@ import { Device } from '../../models/device.model';
   styleUrls: ['./device-control.component.css']
 })
 export class DeviceControlComponent implements OnInit {
-  devices: Device[] = [];
 
-  constructor(private deviceService: DeviceService) { }
+  devices: { name: string, status: string, icon: string }[] = [];
 
   ngOnInit(): void {
-    this.devices = this.deviceService.getDevices();
+    this.devices = [
+      { name: 'Light', status: 'Off', icon: 'lightbulb' },
+      { name: 'Fan 1', status: 'Off', icon: 'games' },
+      { name: 'Fan 2', status: 'Off', icon: 'games' },
+      { name: 'Fan 3', status: 'Off', icon: 'games' },
+      { name: 'Fan 4', status: 'Off', icon: 'games' },
+      { name: 'Fan 5', status: 'Off', icon: 'games' },
+      { name: 'Music', status: 'Off', icon: 'music_video' },
+      { name: 'Charging Point', status: 'Off', icon: 'power' },
+      { name: 'Light 8', status: 'Off', icon: 'lightbulb' },
+      { name: 'Light 9', status: 'Off', icon: 'lightbulb' },
+      { name: 'Light 10', status: 'Off', icon: 'lightbulb' },
+      { name: 'Light 11', status: 'Off', icon: 'lightbulb' },
+      { name: 'Light 12', status: 'Off', icon: 'lightbulb' },
+    ];
   }
 
-  toggleDevice(device: Device): void {
-    this.deviceService.toggleDevice(device);
+  toggleDeviceStatus(device: { name: string, status: string }): void {
+    device.status = device.status === 'Off' ? 'On' : 'Off';
   }
 }
