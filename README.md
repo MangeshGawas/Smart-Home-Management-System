@@ -1,4 +1,9 @@
 # Smart Home Management System
+<!-- Image with specific dimensions -->
+<img src="https://github.com/MangeshGawas/Smart-Home-Management-System/assets/70948059/708c514c-689c-4498-91e8-09f274078a91" alt="Image 1" width="500" height="300">
+
+<!-- Another image with specific dimensions -->
+<img src="https://github.com/MangeshGawas/Smart-Home-Management-System/assets/70948059/4364e6d3-5ec3-4723-9cfc-af567c717ce2" alt="Image 2" width="500" height="300">
 
 The **Smart Home Management System** is an Angular-based web application designed to provide users with a seamless interface for monitoring and controlling various smart devices in their homes. The application features a dashboard that not only gives an overview of the smart home devices but also integrates real-time news and weather forecasts using data from RapidAPI. The system is designed with a modern user interface leveraging Bootstrap and Angular Material for a responsive and visually appealing layout.
 
