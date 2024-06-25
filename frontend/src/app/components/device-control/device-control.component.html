@@ -2,12 +2,12 @@
     <div class="col-md-4" *ngFor="let device of devices">
       <div class="card mb-4 shadow-sm">
         <div class="card-header d-flex align-items-center">
-          <i class="material-icons ">{{ device.icon }}</i>
-          <h4 class="my-0 fw-normal">{{ device.name }}</h4>
+          <i class="material-icons gradient-link">{{ device.icon }}</i>
+          <h4 class="my-0 fw-normal gradient-link">{{ device.name }}</h4>
         </div>
         <div class="card-body">
-          <h1 class="card-title pricing-card-title">{{ device.status }}</h1>
-          <button type="button" class="w-100 btn btn-lg btn-outline-primary" (click)="toggleDeviceStatus(device)">Toggle</button>        </div>
+          <h1 class="card-title pricing-card-title gradient-link">{{ device.status }}</h1>
+          <button type="button" class="w-100 btn btn-lg btn-outline-primary gradient-link" (click)="toggleDeviceStatus(device)">Toggle</button>        </div>
       </div>
     </div>
   </div>

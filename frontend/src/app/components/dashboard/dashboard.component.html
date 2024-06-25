@@ -1,44 +1,46 @@
+<!-- dashboard.component.html -->
+
 <div class="container">
   <div class="row dashboard-header">
     <div class="col">
-      <h2>Dashboard</h2>
-      <p>Overview of your smart home.</p>
+      <h2 class="gradient-link">Dashboard</h2>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 gap-3">
       <div class="card weather-card">
         <div class="card-body">
-          <h5 class="card-title">Weather Forecast</h5>
-          <p class="card-text">
+          <h5 class="card-title gradient-link">Weather Forecast</h5>
+          <p class="card-text gradient-link">
             <span *ngIf="weatherData">{{ weatherData.main.temp }}°C, {{ weatherData.weather[0].description }}</span>
             <span *ngIf="!weatherData">Loading...</span>
           </p>
         </div>
       </div>
-      <div class="card temperature-card">
-        <div class="card-body">
-          <h5 class="card-title">Room Temperature</h5>
-          <p class="card-text">22°C</p>
-        </div>
+        <div class="card video-card mt-2">
+          <div class="card-body">
+            <h5 class="card-title gradient-link">Entertainment</h5>
+            <video width="215px" controls>
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card map-card">
-        <div class="card-body">
-          <h5 class="card-title">Map</h5>
-          <div id="map" style="height: 200px;">Map will be here</div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card video-card">
-        <div class="card-body">
-          <h5 class="card-title">Nature Video</h5>
-          <video controls>
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+   
+    <div class="col-md-8 ">
+   
+
+      <div class="card top-headlines-card">
+        <div class="card-body scrollable-container">
+          <h5 class="card-title gradient-link">Top Headlines</h5>
+          <div *ngIf="articles">
+            <div *ngFor="let article of articles">
+              <h6 class="gradient-link">{{ article.title }}</h6>
+              <p class="gradient-link">{{ article.description }}</p>
+            </div>
+          </div>
+          <p *ngIf="!articles">Loading top headlines...</p>
         </div>
       </div>
     </div>

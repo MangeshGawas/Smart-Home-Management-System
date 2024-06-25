@@ -3,3 +3,17 @@
     overflow-y: auto;
     padding-right: 15px; 
   }
+
+  .gradient-link {
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .gradient-link:hover {
+    background: linear-gradient(to right, #2575fc 0%, #6a11cb 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
