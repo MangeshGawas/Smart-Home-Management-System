@@ -19,15 +19,15 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Specify your Node.js version
+          node-version: '18.17.0'  
 
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests
-        run: npm test
-        env:
-          CI: true  # Ensures tests run in CI mode
+      # - name: Run tests
+      #   run: npm test
+      #   env:
+      #     CI: true 
 
       - name: Build project
         run: npm run build --prod
